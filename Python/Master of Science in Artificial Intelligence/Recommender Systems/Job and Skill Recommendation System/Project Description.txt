@@ -1,0 +1,5 @@
+MSc Research Project.
+
+We created three information networks from historical job data: job transition network, job-skill network and skill co-occurrence network. 
+We developed a representation learning model which utilizes the information from these three networks to jointly learn the representation of the jobs and skills in the shared k-dimensional latent space. 
+Thanks to this we were able to deliver a solid job and skill recommendation system to the Randstad/MICS Research Chair.
