@@ -1,0 +1,7 @@
+Final Electronic Project.
+
+My team developed an intelligent garbage bin that was able to open and close automatically,
+play pleasant and appropriate music, show environmental messages on its front side and
+inform the cleaning staff by Wi-Fi when the container was full.
+I was in charge of the programming part of the project. We used the ATmega64L
+microcontroller and the Atmel Studio 7.0 platform to develop the program in C/C++.
