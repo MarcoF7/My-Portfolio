@@ -1,0 +1,1 @@
+The idea here is to implement marketing campaigns targeting specific groups of customers based on their historical deposit products information.
