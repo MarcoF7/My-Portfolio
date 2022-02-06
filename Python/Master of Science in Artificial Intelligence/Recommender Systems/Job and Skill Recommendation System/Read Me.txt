@@ -1,0 +1,15 @@
+Job and Skill Recommendation System
+
+To run the script:
+
+python Recommendation_System.py --skill "skill name" --job "job name"
+
+There are 2 parameters, --skill and --job. At least 1 has to be specified (they are independent from each other).
+The "skill name" can be taken from the Randstad-skills file, and the "job name" from the CVs data.
+
+For example:
+
+python Recommendation_System.py --skill "Etablir une bonne relation commerciale avec le client" --job "Ingénieur télécommunications  (F/H)"
+
+This command will give us the top 20 skill recommendation for the base skill "Etablir une bonne relation commerciale avec le client".
+In addition to that, it will give us the top 20 job and top 20 skill recommendations for the base job "Ingénieur télécommunications  (F/H)".
