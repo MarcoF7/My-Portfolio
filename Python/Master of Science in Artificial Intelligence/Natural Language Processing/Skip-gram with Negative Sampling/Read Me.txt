@@ -1,0 +1,11 @@
+NLP
+Skip-gram with Negative Sampling Implementation
+
+Noureddine Sedki, Camille Friedrich, Marco Antonio Guillermo Farfan Quiroz, and Nabil Mouadden
+MSc in AI, CentraleSupelec
+
+In this first exercise, we implement and experiment with word embeddings from word2vec Skip-
+gram with negative sampling model trained on the One Billion Word Benchmark for Measuring
+Progress in Statistical Language Modeling. We then evaluate the model on SimLex-999 word
+similarity task by computing the Spearman correlation ratio between the cosine similarity, outputted
+by the model, of the word pairs and the SimLex-999 rating corresponding to them.
