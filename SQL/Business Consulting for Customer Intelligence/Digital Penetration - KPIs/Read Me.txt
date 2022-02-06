@@ -1,0 +1,1 @@
+The idea here is to calculate some KPIs in order to determine the degree of digital penetration in the bank transactions.
