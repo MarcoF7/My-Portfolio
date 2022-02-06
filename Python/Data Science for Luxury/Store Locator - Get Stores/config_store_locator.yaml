@@ -1,0 +1,260 @@
+﻿CHANEL:
+  domain: services.chanel.com
+  items: //ul[@id="store-list-chanel"]/li
+  store_name: .//h2/a/text()
+  items_r: //ul[@id="store-list-retailers"]/li
+  store_name_r: .//h3/a/text()
+  address: .//address/text()
+  city: .//address/span[@class="zipcode"]/text()
+  start_url: 
+    - https://services.chanel.com/en_US/storelocator/
+
+DIOR:
+  domain: dior.com
+  items: //div[@class="ShopBlock"]
+  store_name: .//h4//button/span[2]/text()
+  city: .//ul[@class="ShopBlock__address"]/li[2]/text()
+  city2: .//ul[@class="ShopBlock__address"]/li[3]/text()
+  address: .//ul[@class="ShopBlock__address"]/li[1]/text()
+  start_url:
+    - https://www.dior.com/store/en_us?origin=onedior&codeLanguage=en_us
+
+HERMES:
+  domain: hermes.com
+  items: //ul[@id="list-store"]/li
+  load_button: //a[@id="btShowMore"]
+  store_name: .//h4/a/text()
+  address_city: .//p[@class="address"]/text()
+  country: .//p[@class="address"]/text()[2]
+  start_url:
+    - https://www.hermes.com/us/en/find-store/
+
+AUDEMARS PIGUET:
+  domain: audemarspiguet.com
+  items: //ul[@class="ap-storelocator__sidebar-stores"]/li
+  store_name: .//span[@class="store-card__name"]/text()
+  address_city: .//p[@class="store-card__address"]/text()
+  status: .//div[@class="store-card__hours"]/span[contains(text(), "Temporary closed")]/text()
+  start_url:
+    - https://www.audemarspiguet.com/com/en/stores.html
+
+LAMBORGHINI:
+  domain: lamborghinistore.com
+  items: //li[contains(@class, "MuiListItem-root")]
+  store_name: .//div[@class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"]/p[1]/text()
+  address: .//div[@class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"]/p[2]/text()
+  start_url:
+    - https://www.lamborghinistore.com/se/storelocator/overview/
+
+FERRARI:
+  domain: ferrari.com
+  items: //div[@class="DealerList__content__1RXODdgF"]//div[@class="AccordionLinksGrid__group__2P6YO7zM"]
+  country: ./div/text()
+  store_name_city: ./ul/li/a/span/text()
+  start_url:
+    - https://www.ferrari.com/en-EN/auto/dealers
+
+PATEK PHILIPPE:
+  domain: patek.com
+  items: //div[@class="datas"]/div
+  store_name: ./p[contains(@class,"name")]/text()
+  country: ./p[@class="country"]/text()
+  address: ./p[@class="address"]//text()
+  city: ./p[@class="bloc_city"]/span[@class="city"]/text()
+  start_url:
+    - https://www.patek.com/en/retail-service/distributors
+    - https://www.patek.com/en/retail-service/authorized-retailers/
+
+VACHERON CONSTANTIN:
+  domain: stores.vacheron-constantin.com
+  items: //li[@class="Directory-listItem"]
+  url: ./a/@href
+  multi: //ul[@class="Directory-listTeasers Directory-row"]/li
+  urld: .//a[@class="Teaser-titleLink"]/@href
+  nbshop: ./a/@data-count
+  country: ./a/span/text()
+  address: //span[@class="c-address-street-1"]/text()
+  city: //span[@class="c-address-city"]/text()
+  is_partner: //span[@class="LocationName-name"]/text()
+  store_name: //span[@class="LocationName-geo"]/text()
+  start_url:
+    - https://stores.vacheron-constantin.com/index.html
+
+BREGUET:
+  domain: store.breguet.com
+  items: //div[@class="item-list"]/ul/li[contains(@class, "views-row views-row-")]
+  load_button: //ul[@class="pager pager-load-more"]//a[contains(text(), "Load more results")]
+  store_name: .//h2/a/span/text()
+  address: .//div[@class="pos-address"]/text()[1]
+  city: .//div[@class="pos-address"]/text()[2]
+  start_url:
+    - https://store.breguet.com/en/point-of-sale?country=All&region=All&store=Breguet
+
+CARTIER_BOUTIQUES:
+  domain: stores.cartier.com
+  items: //li[@class="Directory-listItem"]
+  url: ./a/@href
+  multi: //ul[@class="Directory-listTeasers Directory-row"]/li
+  urld: .//a[@class="Teaser-titleLink"]/@href
+  nbshop: ./a/@data-count
+  country: ./a/span/text()
+  address: //span[@class="c-address-street-1"]/text()
+  city: //span[@class="c-address-city"]/text()
+  store_name: //span[@class="LocationName-brand"]/text()
+  store_name2: //span[@class="LocationName-geo"]/text()
+  start_url:
+    - https://stores.cartier.com/
+
+CARTIER_RETAILERS:
+  domain: stores.cartier.com
+  items: //ol[@class="ResultList"]/li
+  country: .//address//abbr/@title
+  address: .//address//span[@class="c-address-street-1"]/text()
+  city: .//address//span[@class="c-address-city"]/text()
+  store_name: .//span[@class="LocationName"]/span[@class="LocationName-brand"]/text()
+  start_url:
+    - https://stores.cartier.com/en_eu/search?q=Paris%2C+France&category=storeLocatorSearch&r=500&storetype=true&watches=true
+
+ROLEX:
+  domain: rolex.com
+  items: //ul[@class="sc-oTOtL gYNRye"]/li
+  store_name: .//p[@class="sc-pJhSf gdVGCp"]/text()
+  info1: .//span[@class="sc-fzoxKX sc-fznMnq sc-oTzDS fotNMM"][1]/text()
+  info2: .//span[@class="sc-fzoxKX sc-fznMnq sc-oTzDS fotNMM"][2]/text()
+  info3: .//span[@class="sc-fzoxKX sc-fznMnq sc-oTzDS fotNMM"][3]/text()
+  info4: .//span[@class="sc-fzoxKX sc-fznMnq sc-oTzDS fotNMM"][4]/text()
+  info5: .//span[@class="sc-fzoxKX sc-fznMnq sc-oTzDS fotNMM"][5]/text()
+  start_url:
+    - https://www.rolex.com/rolex-dealers.html#mode=list
+
+TAGHEUER:
+  domain: store.tagheuer.com
+  country_code: //ul[@class="components-major-location-list-basic__list"]/li/h3/a/@href
+  items: //ul[@id="items"]/li
+  store_name: ./@data-name
+  store_address1: .//p[@class="storefinder-itemAddress"]/span[@class="storefinder-addressText"][1]/text()
+  store_address2: .//p[@class="storefinder-itemAddress"]/span[@class="storefinder-addressText"][2]/text()
+  store_address3: .//p[@class="storefinder-itemAddress"]/span[@class="storefinder-city"]/text()
+  start_url:
+    - https://www.tagheuer.com/fr/en/stores/
+
+ZENITH:
+  domain: zenith-watches.com
+  country_code: //select[@id="country"]/option[not(@disabled)]/@value
+  items: //ul[@data-v-29ebf026][2]/li
+  store_name: .//h3/text()
+  store_address1: .//p/text()[1]
+  store_address2: .//p/text()[2]
+  store_address3: .//p/text()[3]
+  start_url:
+    - https://www.zenith-watches.com/en_us/store-locator?filter=official,retailer&store=&country=&address=&latlng=
+    
+OMEGA:
+  domain: omegawatches.com
+  country_code: //ul[@id="pm-findstore-listbox-country-ul"]/li/a[not(@title="")]/@href
+  city_code: //ul[@id="pm-findstore-listbox-city-ul"]/li/a/@href
+  items: //ul[@class="cont"]/li
+  store_name: .//div/div/h3/text()
+  store_address1: .//span[@class="pm-result-address"]/text()[1]
+  store_address2: .//span[@class="pm-result-address"]/text()[2]
+  store_address3: .//span[@class="pm-result-address"]/text()[3]
+  store_address4: .//span[@class="pm-result-address"]/text()[4]
+  store_address5: .//span[@class="pm-result-address"]/text()[5]
+  store_address6: .//span[@class="pm-result-address"]/text()[6]
+  store_address7: .//span[@class="pm-result-address"]/text()[7]
+  start_url:
+    - https://www.omegawatches.com/store?default 
+    
+HUBLOT:
+  domain: hublot.com
+  items_boutique: //div[contains(@class,"bq_search_results__boutiques") and contains(@class,"js_boutiques_block")]//div[@class="views-row"]
+  items_retailer: //div[contains(@class,"bq_search_results__retailers")]//div[@class="views-row"]
+  store_name: .//a//span//text()
+  store_address: .//div//span[@class="quote-16"]//text()
+  start_url:
+    - https://www.hublot.com/en-ch/boutiques?dist=100
+
+TUDOR:
+  domain: tudorwatch.com
+  items: //ul[@class="sc-epFnbX eYwXHh storeloc-list"]/li
+  store_name1: .//h2[@class="sc-ieebsP sc-dWbTMY fjpJNi fczTNH"]/text()[1]
+  store_name2: .//h2[@class="sc-ieebsP sc-dWbTMY fjpJNi fczTNH"]/text()[2]
+  store_address1: .//div[@class="sc-dlVyqM sc-faIaKH cDNlyh gyFdOW"]/text()[1]
+  store_address2: .//div[@class="sc-dlVyqM sc-faIaKH cDNlyh gyFdOW"]/text()[2]
+  store_address3: .//div[@class="sc-dlVyqM sc-faIaKH cDNlyh gyFdOW"]/text()[3]
+  store_address4: .//div[@class="sc-dlVyqM sc-faIaKH cDNlyh gyFdOW"]/text()[4]
+  store_address5: .//div[@class="sc-dlVyqM sc-faIaKH cDNlyh gyFdOW"]/text()[5]
+  store_address6: .//div[@class="sc-dlVyqM sc-faIaKH cDNlyh gyFdOW"]/text()[6]
+  store_address7: .//div[@class="sc-dlVyqM sc-faIaKH cDNlyh gyFdOW"]/text()[7]
+  store_partner: .//div[@class="sc-ieebsP sc-fpyFCW fjpJNi lknAPD"]/text()
+  start_url:
+    - https://www.tudorwatch.com/en/retailers
+    
+ULYSSE NARDIN:
+  domain: ulysse-nardin.com
+  items: //div[@class="store-locator-detail-div"]
+  store_name: .//div[@class="store-name"]/text()
+  store_address1: .//div[@class="thoroughfare"]/text()
+  store_address2: .//span[@class="postal-code"]/text()
+  store_address3: .//span[@class="locality"]/text()
+  country: .//span[@class="country"]/text()
+  start_url:
+    - https://www.ulysse-nardin.com/row_en/stores/
+    
+GIRARD PERREGAUX:
+  domain: girard-perregaux.com
+  items: //ul[@class="list"]/li
+  store_name: .//div[@class="name"]/text()
+  store_address1: .//span[@class="street"]/text()
+  store_address2: .//span[@class="city-zip-code"]/text()
+  store_address3: .//span[@class="country"]/text()
+  start_url:
+    - https://www.girard-perregaux.com/row_eur_en/retailers
+    
+LONGINES:
+  domain: longines.com
+  country_code: //select[@id="select-country"]//option//@value
+  country_region_code: //select[@id="select-state"]//option//@value
+  country_region_city_code: //select[@id="select-city"]//option//@value
+  items_boutique: //ul[@id="accordion-shops"]/li[div[@class="icons-services" and span[@class="watches"]]]
+  items_retailer: //ul[@id="accordion-retailer"]/li[div[@class="icons-services" and span[@class="watches"]]]
+  items_distribu: //ul[@id="accordion-distributor"]/li
+  store_name1: .//h2[@class="title"]/text()[1]
+  store_name2: .//h2[@class="title"]/text()[2]
+  store_address1: ./span[1]/text()[1]
+  store_address2: ./span[2]/text()[1]
+  start_url:
+    - https://www.longines.com/retailers/fr    
+    
+RICHARD MILLE:
+  domain: richardmille.com
+  country_code: (//select[@class="form__input"])[1]//option
+  items: //div[@class="vb-content"]//a
+  store_name: .//div[@class="text"]//div[1]//text()
+  store_address1: .//div[@class="text"]//div[2]//text()[1]
+  store_address2: .//div[@class="text"]//div[2]//text()[2]
+  store_address3: .//div[@class="text"]//div[2]//text()[3]
+  country: .//div[@class="text"]//span//text()
+  start_url:
+    - https://www.richardmille.com/storelocator
+    
+CHOPARD:
+  domain: chopard.com
+  country_code: //select[@class="country-field"]/option/@value
+  items: //ul[@class="store-list"]/li
+  store_name: .//h2/text()
+  store_address1: .//p[1]//text()
+  store_address2: .//p[4]//text()
+  start_url:
+    - https://www.chopard.com/intl/storelocator
+    
+BVLGARI:
+  domain: bulgari.com
+  country: //div[@class="cell store-continet-list"]/a/@href
+  items: //div[@id="storeResults"]/div[@class="store-details"]
+  store_name: .//div[@class="info-locator-item-title"]//text()
+  store_boutique: .//div[@class="info-locator-item-subtitle"]//text()
+  store_address: .//address//div[@class="info-locator-item-text"]/text()
+  start_url:
+    - https://www.bulgari.com/en-int/storelocator
+    
