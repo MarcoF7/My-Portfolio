@@ -1,0 +1,4 @@
+Bachelor of Science Thesis Project:
+
+Design of an automated temperature and PH control system to improve the breeding of stage 1 
+paiche (Arapaima gigas) fry in the Research Institute of the Peruvian Amazon.
